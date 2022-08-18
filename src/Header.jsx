@@ -1,14 +1,18 @@
 import React from 'react'
 import BoxData from "./BoxData"
 import Box from "./Box"
-import "./Style.css"
 
 
 export default function Header( { boxes, setBoxes, checked, setChecked, checkedBoxList, setCheckedBoxList }) {
     
     async function buttonAction() {
         let tmpentries = BoxData.boxes
+        let tmplist = tmpentries.map(item => {
+            return item.checked ?? item.id
+        })
+        setCheckedBoxList(tmplist)
         console.log("tmpentries:",tmpentries)
+        console.log("tmplist:",tmplist)
         const sets = tmpentries.map(item =>
             <Box
                 key={item.id}
@@ -18,7 +22,8 @@ export default function Header( { boxes, setBoxes, checked, setChecked, checkedB
                 checkedBoxList={checkedBoxList}
                 setCheckedBoxList={setCheckedBoxList}
             />
-        );
+        )
+
     
         return (
             setBoxes(sets)
