@@ -1,0 +1,12 @@
+{
+"boxes":[
+    {"id": 1,
+    "checked": false},
+    {"id": 2,
+    "checked": false},
+    {"id": 3,
+    "checked": false},
+    {"id": 4,
+    "checked": false}
+]
+}

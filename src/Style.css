@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    font-size: 1.5rem
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 5px;
+    border: black solid 1px
+}
+
+.button:hover {
+    background-color: lightgreen
+}
+
+.boxContainer {
+    display: flex;
+    justify-content: center
+}
