@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import BoxData from "./BoxData"
 import Box from "./Box"
 import "./Style.css"
@@ -11,6 +11,7 @@ export default function Header( { boxes, setBoxes, checked, setChecked, checkedB
         console.log("tmpentries:",tmpentries)
         const sets = tmpentries.map(item =>
             <Box
+                key={item.id}
                 id={item.id}
                 checked={item.checked}
                 setChecked={setChecked}
