@@ -1,7 +1,9 @@
 import React from "react"
 
-export default function DataSet({ id, checked, setChecked, checkedBoxList, setCheckedBoxList }) {
+export default function DataSet({ boxes, setBoxes, id, checked, setChecked, checkedBoxList, setCheckedBoxList }) {
 
+    
+    
     function toggleCheck(id) {
         // create temp vals
         var tmplist = checkedBoxList
@@ -13,6 +15,7 @@ export default function DataSet({ id, checked, setChecked, checkedBoxList, setCh
         // make changes to state
         setChecked(!tmpchecked)
         setCheckedBoxList(tmplist)
+        console.log(boxes)
         console.log("after:",tmplist, tmpchecked)
     }
 

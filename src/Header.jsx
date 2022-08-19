@@ -17,6 +17,8 @@ export default function Header( { boxes, setBoxes, checked, setChecked, checkedB
             <Box
                 key={item.id}
                 id={item.id}
+                boxes={boxes}
+                setBoxes={setBoxes}
                 checked={item.checked}
                 setChecked={setChecked}
                 checkedBoxList={checkedBoxList}
@@ -24,11 +26,9 @@ export default function Header( { boxes, setBoxes, checked, setChecked, checkedB
             />
         )
 
-    
-        return (
-            setBoxes(sets)
-        )
+        setBoxes(sets)
 
+    
     }
 
     return (
