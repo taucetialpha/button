@@ -3,7 +3,7 @@ import BoxData from "./BoxData"
 import Box from "./Box"
 
 
-export default function Header( { boxes, setBoxes, checked, setChecked, checkedBoxList, setCheckedBoxList }) {
+export default function Header( { boxes, setBoxes, checkedBoxList, setCheckedBoxList }) {
     
     async function buttonAction() {
         let tmpentries = BoxData.boxes
@@ -17,10 +17,6 @@ export default function Header( { boxes, setBoxes, checked, setChecked, checkedB
             <Box
                 key={item.id}
                 id={item.id}
-                boxes={boxes}
-                setBoxes={setBoxes}
-                checked={item.checked}
-                setChecked={setChecked}
                 checkedBoxList={checkedBoxList}
                 setCheckedBoxList={setCheckedBoxList}
             />
